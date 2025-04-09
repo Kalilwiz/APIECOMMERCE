@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\fic\\Downloads\\IWBB\\EcommerceAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5535FEB7-1CBB-41A7-B6A1-639BC31C6FED}|EcommerceAPI\\EcommerceAPI.csproj|c:\\users\\fic\\downloads\\iwbb\\ecommerceapi\\ecommerceapi\\interfaces\\iprodutorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5535FEB7-1CBB-41A7-B6A1-639BC31C6FED}|EcommerceAPI\\EcommerceAPI.csproj|solutionrelative:ecommerceapi\\interfaces\\iprodutorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5535FEB7-1CBB-41A7-B6A1-639BC31C6FED}|EcommerceAPI\\EcommerceAPI.csproj|c:\\users\\fic\\downloads\\iwbb\\ecommerceapi\\ecommerceapi\\context\\aquicometerasloucurascontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5535FEB7-1CBB-41A7-B6A1-639BC31C6FED}|EcommerceAPI\\EcommerceAPI.csproj|solutionrelative:ecommerceapi\\context\\aquicometerasloucurascontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5535FEB7-1CBB-41A7-B6A1-639BC31C6FED}|EcommerceAPI\\EcommerceAPI.csproj|c:\\users\\fic\\downloads\\iwbb\\ecommerceapi\\ecommerceapi\\models\\itemdopedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5535FEB7-1CBB-41A7-B6A1-639BC31C6FED}|EcommerceAPI\\EcommerceAPI.csproj|solutionrelative:ecommerceapi\\models\\itemdopedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5535FEB7-1CBB-41A7-B6A1-639BC31C6FED}|EcommerceAPI\\EcommerceAPI.csproj|c:\\users\\fic\\downloads\\iwbb\\ecommerceapi\\ecommerceapi\\models\\pagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5535FEB7-1CBB-41A7-B6A1-639BC31C6FED}|EcommerceAPI\\EcommerceAPI.csproj|solutionrelative:ecommerceapi\\models\\pagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5535FEB7-1CBB-41A7-B6A1-639BC31C6FED}|EcommerceAPI\\EcommerceAPI.csproj|c:\\users\\fic\\downloads\\iwbb\\ecommerceapi\\ecommerceapi\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5535FEB7-1CBB-41A7-B6A1-639BC31C6FED}|EcommerceAPI\\EcommerceAPI.csproj|solutionrelative:ecommerceapi\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5535FEB7-1CBB-41A7-B6A1-639BC31C6FED}|EcommerceAPI\\EcommerceAPI.csproj|c:\\users\\fic\\downloads\\iwbb\\ecommerceapi\\ecommerceapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5535FEB7-1CBB-41A7-B6A1-639BC31C6FED}|EcommerceAPI\\EcommerceAPI.csproj|solutionrelative:ecommerceapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IProdutoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fic\\Downloads\\IWBB\\EcommerceAPI\\EcommerceAPI\\Interfaces\\IProdutoRepository.cs",
+              "RelativeDocumentMoniker": "EcommerceAPI\\Interfaces\\IProdutoRepository.cs",
+              "ToolTip": "C:\\Users\\fic\\Downloads\\IWBB\\EcommerceAPI\\EcommerceAPI\\Interfaces\\IProdutoRepository.cs",
+              "RelativeToolTip": "EcommerceAPI\\Interfaces\\IProdutoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T00:49:14.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ItemDoPedido.cs",
+              "DocumentMoniker": "C:\\Users\\fic\\Downloads\\IWBB\\EcommerceAPI\\EcommerceAPI\\Models\\ItemDoPedido.cs",
+              "RelativeDocumentMoniker": "EcommerceAPI\\Models\\ItemDoPedido.cs",
+              "ToolTip": "C:\\Users\\fic\\Downloads\\IWBB\\EcommerceAPI\\EcommerceAPI\\Models\\ItemDoPedido.cs",
+              "RelativeToolTip": "EcommerceAPI\\Models\\ItemDoPedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T00:38:06.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Pagamento.cs",
+              "DocumentMoniker": "C:\\Users\\fic\\Downloads\\IWBB\\EcommerceAPI\\EcommerceAPI\\Models\\Pagamento.cs",
+              "RelativeDocumentMoniker": "EcommerceAPI\\Models\\Pagamento.cs",
+              "ToolTip": "C:\\Users\\fic\\Downloads\\IWBB\\EcommerceAPI\\EcommerceAPI\\Models\\Pagamento.cs",
+              "RelativeToolTip": "EcommerceAPI\\Models\\Pagamento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T00:38:04.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AquiCometerasLoucurasContext.cs",
+              "DocumentMoniker": "C:\\Users\\fic\\Downloads\\IWBB\\EcommerceAPI\\EcommerceAPI\\Context\\AquiCometerasLoucurasContext.cs",
+              "RelativeDocumentMoniker": "EcommerceAPI\\Context\\AquiCometerasLoucurasContext.cs",
+              "ToolTip": "C:\\Users\\fic\\Downloads\\IWBB\\EcommerceAPI\\EcommerceAPI\\Context\\AquiCometerasLoucurasContext.cs",
+              "RelativeToolTip": "EcommerceAPI\\Context\\AquiCometerasLoucurasContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T00:29:31.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\fic\\Downloads\\IWBB\\EcommerceAPI\\EcommerceAPI\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "EcommerceAPI\\Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\fic\\Downloads\\IWBB\\EcommerceAPI\\EcommerceAPI\\Models\\Cliente.cs",
+              "RelativeToolTip": "EcommerceAPI\\Models\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T00:28:10.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\fic\\Downloads\\IWBB\\EcommerceAPI\\EcommerceAPI\\Program.cs",
+              "RelativeDocumentMoniker": "EcommerceAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\fic\\Downloads\\IWBB\\EcommerceAPI\\EcommerceAPI\\Program.cs",
+              "RelativeToolTip": "EcommerceAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T22:41:31.481Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
