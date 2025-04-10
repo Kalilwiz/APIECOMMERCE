@@ -16,15 +16,15 @@ public partial class AquiCometerasLoucurasContext : DbContext
     {
     }
 
-    public virtual DbSet<Cliente> Clientes { get; set; }
+    public virtual DbSet<ItemDoPedido> Clientes { get; set; }
 
     public virtual DbSet<ItemDoPedido> ItemDoPedidos { get; set; }
 
-    public virtual DbSet<Pagamento> Pagamentos { get; set; }
+    public virtual DbSet<ItemDoPedido> Pagamentos { get; set; }
 
-    public virtual DbSet<Pedido> Pedidos { get; set; }
+    public virtual DbSet<ItemDoPedido> Pedidos { get; set; }
 
-    public virtual DbSet<Produto> Produtos { get; set; }
+    public virtual DbSet<ItemDoPedido> Produtos { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
@@ -32,7 +32,7 @@ public partial class AquiCometerasLoucurasContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Cliente>(entity =>
+        modelBuilder.Entity<ItemDoPedido>(entity =>
         {
             entity.HasKey(e => e.IdCliente).HasName("PK__Cliente__D59466424BBD69C7");
 
@@ -67,7 +67,7 @@ public partial class AquiCometerasLoucurasContext : DbContext
                 .HasConstraintName("FK__ItemDoPed__IdPro__5441852A");
         });
 
-        modelBuilder.Entity<Pagamento>(entity =>
+        modelBuilder.Entity<ItemDoPedido>(entity =>
         {
             entity.HasKey(e => e.IdPagamento).HasName("PK__Pagament__D474651E07F34D14");
 
@@ -85,7 +85,7 @@ public partial class AquiCometerasLoucurasContext : DbContext
                 .HasConstraintName("FK__Pagamento__IdPed__4E88ABD4");
         });
 
-        modelBuilder.Entity<Pedido>(entity =>
+        modelBuilder.Entity<ItemDoPedido>(entity =>
         {
             entity.HasKey(e => e.IdPedido).HasName("PK__Pedido__9D335DC361496673");
 
@@ -101,7 +101,7 @@ public partial class AquiCometerasLoucurasContext : DbContext
                 .HasConstraintName("FK__Pedido__IdClient__4BAC3F29");
         });
 
-        modelBuilder.Entity<Produto>(entity =>
+        modelBuilder.Entity<ItemDoPedido>(entity =>
         {
             entity.HasKey(e => e.IdProduto).HasName("PK__Produto__2E883C23BBDE593E");
 
