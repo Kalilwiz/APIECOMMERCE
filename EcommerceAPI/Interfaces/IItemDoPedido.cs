@@ -9,11 +9,11 @@ namespace EcommerceAPI.Interfaces
         ItemDoPedido BuscarPorId(int id);
 
         //  C - Create (cadastro)
-        void Cadastrar(ItemDoPedido produto);
+        void Cadastrar(ItemDoPedido itempedido);
 
         //  U - Update (atualizacao)
 
-        void Atualizar(int id, ItemDoPedido produto);
+        void Atualizar(int id, ItemDoPedido itempedido);
 
         //  D - Delete(Apagar)
 

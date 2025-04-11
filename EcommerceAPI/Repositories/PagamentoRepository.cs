@@ -4,29 +4,28 @@ using EcommerceAPI.Models;
 
 namespace EcommerceAPI.Repositories
 {
-    public class ProdutoRepository : IprodutoRepository
+    public class PagamentoRepository : IPagamentoRepository
     {
-
         private readonly AquiCometerasLoucurasContext _context;
 
-        public ProdutoRepository(AquiCometerasLoucurasContext context)
+        public PagamentoRepository(AquiCometerasLoucurasContext context)
         {
             _context = context;
         }
 
-        public void Atualizar(int id, Produto produto)
+        public void Atualizar(int id, Pagamento pagamento)
         {
             throw new NotImplementedException();
         }
 
-        public Produto BuscarPorId(int id)
+        public Pagamento BuscarPorId(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Cadastrar(Produto produto)
+        public void Cadastrar(Pagamento pagamento)
         {
-            _context.Produtos.Add(produto);
+            throw new NotImplementedException();
         }
 
         public void Deletar(int id)
@@ -34,9 +33,9 @@ namespace EcommerceAPI.Repositories
             throw new NotImplementedException();
         }
 
-        public List<Produto> ListarTodos()
+        public List<Pagamento> ListarTodos()
         {
-            return _context.Produtos.ToList();
+            return _context.Pagamentos.ToList();
         }
     }
 }

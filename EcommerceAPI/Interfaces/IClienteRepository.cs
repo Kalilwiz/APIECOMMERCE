@@ -5,17 +5,17 @@ namespace EcommerceAPI.Interfaces
     public interface IClienteRepository
     {
         //  R - Read
-        List<ItemDoPedido> ListarTodos();
+        List<Cliente> ListarTodos();
 
-        ItemDoPedido BuscarPorId(int id);
-        ItemDoPedido BuscarPorEmailSenha(string email, string senha);
+        Cliente BuscarPorId(int id);
+        Cliente BuscarPorEmailSenha(string email, string senha);
 
         //  C - Create
-        void Cadastrar(ItemDoPedido produto);
+        void Cadastrar(Cliente cliente);
 
         //  U - Update
 
-        void Atualizar(int id, ItemDoPedido produto);
+        void Atualizar(int id, Cliente cliente);
 
         //  D - Delete
 

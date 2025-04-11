@@ -5,16 +5,16 @@ namespace EcommerceAPI.Interfaces
     public interface IPedidoRepository
     {   
         //  R - Read (ler)
-        List<ItemDoPedido> ListarTodos();
+        List<Pedido> ListarTodos();
 
-        ItemDoPedido BuscarPorId(int id);
+        Pedido BuscarPorId(int id);
 
         //  C - Create (cadastro)
-        void Cadastrar(ItemDoPedido produto);
+        void Cadastrar(Pedido pedido);
 
         //  U - Update (atualizacao)
 
-        void Atualizar(int id, ItemDoPedido produto);
+        void Atualizar(int id, Pedido pedido);
 
         //  D - Delete(Apagar)
 

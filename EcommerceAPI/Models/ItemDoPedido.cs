@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 
 namespace EcommerceAPI.Models;
 
@@ -13,7 +14,7 @@ public partial class ItemDoPedido
 
     public int? Quantidade { get; set; }
 
-    public virtual ItemDoPedido? IdPedidoNavigation { get; set; }
+    public virtual Pedido? IdPedidoNavigation { get; set; }
 
-    public virtual ItemDoPedido? IdProdutoNavigation { get; set; }
+    public virtual Produto? IdProdutoNavigation { get; set; }
 }

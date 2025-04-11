@@ -4,16 +4,16 @@ namespace EcommerceAPI.Interfaces
 {
     public interface IPagamentoRepository
     {
-        List<ItemDoPedido> ListarTodos();    
+        List<Pagamento> ListarTodos();    
 
-        ItemDoPedido BuscarPorId(int id);    
+        Pagamento BuscarPorId(int id);    
 
         //  C - Create (cadastro)
-        void Cadastrar(ItemDoPedido produto);    
+        void Cadastrar(Pagamento pagamento);    
 
         //  U - Update (atualizacao)
 
-        void Atualizar(int id, ItemDoPedido produto);
+        void Atualizar(int id, Pagamento pagamento);
 
         //  D - Delete(Apagar)
 

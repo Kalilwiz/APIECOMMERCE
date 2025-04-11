@@ -13,10 +13,10 @@ namespace EcommerceAPI.Controllers
         private IprodutoRepository _produtoRepository;
 
         private readonly AquiCometerasLoucurasContext _context;
-        public ProdutoController(AquiCometerasLoucurasContext context)
+        public ProdutoController(AquiCometerasLoucurasContext context, IprodutoRepository produtoRepository)
         {
             _context = context;
-            _produtoRepository = new ProdutoRepository(_context);
+            _produtoRepository = produtoRepository;
         }
          
         [HttpGet]

@@ -15,9 +15,9 @@ public partial class Pedido
 
     public int? IdCliente { get; set; }
 
-    public virtual ItemDoPedido? IdClienteNavigation { get; set; }
+    public virtual Cliente? IdClienteNavigation { get; set; }
 
     public virtual ICollection<ItemDoPedido> ItemDoPedidos { get; set; } = new List<ItemDoPedido>();
 
-    public virtual ICollection<ItemDoPedido> Pagamentos { get; set; } = new List<ItemDoPedido>();
+    public virtual ICollection<Pagamento> Pagamentos { get; set; } = new List<Pagamento>();
 }
