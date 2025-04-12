@@ -2,7 +2,7 @@
   {
     "ContainingType": "EcommerceAPI.Controllers.ClienteController",
     "Method": "ListarTodos",
-    "RelativePath": "api/Cliente",
+    "RelativePath": "api/Caloteiros",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -27,6 +27,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EcommerceAPI.Controllers.ProdutoController",
+    "Method": "CadastrarProduto",
+    "RelativePath": "api/Produto",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "produto",
+        "Type": "EcommerceAPI.Models.Produto",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]

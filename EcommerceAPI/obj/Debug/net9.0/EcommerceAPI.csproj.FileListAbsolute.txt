@@ -162,3 +162,8 @@ C:\Users\fic\Downloads\IWBB\EcommerceAPI\EcommerceAPI\obj\Debug\net9.0\Ecommerce
 C:\Users\fic\Downloads\IWBB\EcommerceAPI\EcommerceAPI\obj\Debug\net9.0\Ecommerc.C58B2BB1.Up2Date
 C:\Users\fic\Downloads\IWBB\EcommerceAPI\EcommerceAPI\obj\Debug\net9.0\EcommerceAPI.sourcelink.json
 C:\Users\fic\Downloads\IWBB\EcommerceAPI\EcommerceAPI\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\fic\Downloads\IWBB\EcommerceAPI\EcommerceAPI\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\fic\Downloads\IWBB\EcommerceAPI\EcommerceAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\fic\Downloads\IWBB\EcommerceAPI\EcommerceAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\fic\Downloads\IWBB\EcommerceAPI\EcommerceAPI\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\fic\Downloads\IWBB\EcommerceAPI\EcommerceAPI\obj\Debug\net9.0\EcommerceAPI.MvcApplicationPartsAssemblyInfo.cs

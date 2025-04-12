@@ -25,7 +25,7 @@ namespace EcommerceAPI.Repositories
 
         public void Cadastrar(Pagamento pagamento)
         {
-            throw new NotImplementedException();
+            _context.Pagamentos.Add(pagamento);
         }
 
         public void Deletar(int id)

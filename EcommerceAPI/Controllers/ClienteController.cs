@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EcommerceAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Caloteiros")]
     [ApiController]
     public class ClienteController : ControllerBase
     {
