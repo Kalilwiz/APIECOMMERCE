@@ -1,5 +1,7 @@
 ﻿using EcommerceAPI.Context;
 using EcommerceAPI.Interfaces;
+using EcommerceAPI.Models;
+using EcommerceAPI.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,21 +11,26 @@ namespace EcommerceAPI.Controllers
     [ApiController]
     public class PagamentoController : ControllerBase
     {
-        private readonly AquiCometerasLoucurasContext _context;
-
         private IPagamentoRepository _pagamentoRepository;
 
-        public PagamentoController(AquiCometerasLoucurasContext context, IPagamentoRepository pagamentoRepository)
+        public PagamentoController(IPagamentoRepository pagamentoRepository)
         {
-            _context = context;
             _pagamentoRepository = pagamentoRepository;
         }
 
         [HttpGet]
         public IActionResult ListarTodos()
 
-        { 
+        {
             return Ok(_pagamentoRepository.ListarTodos());
+        }
+
+        [HttpPost]
+        public IActionResult CadastrarPagamento(Pagamento pagamento)
+        {
+            _pagamentoRepository.Cadastrar(pagamento);
+
+            return Created();
         }
     }
 }

@@ -27,6 +27,9 @@ namespace EcommerceAPI.Repositories
         public void Cadastrar(Produto produto)
         {
             _context.Produtos.Add(produto);
+
+            _context.SaveChanges();
+
         }
 
         public void Deletar(int id)

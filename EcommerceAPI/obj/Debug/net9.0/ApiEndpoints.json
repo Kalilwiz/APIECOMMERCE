@@ -2,11 +2,27 @@
   {
     "ContainingType": "EcommerceAPI.Controllers.ClienteController",
     "Method": "ListarTodos",
-    "RelativePath": "api/Caloteiros",
+    "RelativePath": "api/Cliente",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EcommerceAPI.Controllers.ClienteController",
+    "Method": "Cadastrar",
+    "RelativePath": "api/Cliente",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cliente",
+        "Type": "EcommerceAPI.Models.Cliente",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -17,6 +33,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EcommerceAPI.Controllers.PagamentoController",
+    "Method": "CadastrarPagamento",
+    "RelativePath": "api/Pagamento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pagamento",
+        "Type": "EcommerceAPI.Models.Pagamento",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

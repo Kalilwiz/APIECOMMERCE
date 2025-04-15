@@ -1,21 +1,20 @@
 ﻿using EcommerceAPI.Context;
 using EcommerceAPI.Interfaces;
+using EcommerceAPI.Models;
+using EcommerceAPI.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EcommerceAPI.Controllers
 {
-    [Route("api/Caloteiros")]
+    [Route("api/[controller]")]
     [ApiController]
     public class ClienteController : ControllerBase
     {
-        private readonly AquiCometerasLoucurasContext _context;
-
         private IClienteRepository _clienteRepository;
 
-        public ClienteController(AquiCometerasLoucurasContext context, IClienteRepository clienteRepository)
+        public ClienteController(IClienteRepository clienteRepository)
         {
-            _context = context;
             _clienteRepository = clienteRepository;
         }
 
@@ -24,6 +23,14 @@ namespace EcommerceAPI.Controllers
         public IActionResult ListarTodos()
         {
             return Ok(_clienteRepository.ListarTodos());
+        }
+
+        [HttpPost]
+        public IActionResult Cadastrar(Cliente cliente)
+        {
+            _clienteRepository.Cadastrar(cliente);
+            return Created();
+
         }
 
 

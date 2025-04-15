@@ -13,11 +13,9 @@ namespace EcommerceAPI.Controllers
     {
         private IprodutoRepository _produtoRepository;
 
-        private readonly AquiCometerasLoucurasContext _context;
-        public ProdutoController(AquiCometerasLoucurasContext context, IprodutoRepository produtoRepository)
+        public ProdutoController(IprodutoRepository produtoRepository)
         {
-            _context = context;
-            _produtoRepository = new ProdutoRepository(context);
+            _produtoRepository = produtoRepository;
         }
 
         [HttpGet]
@@ -30,9 +28,7 @@ namespace EcommerceAPI.Controllers
         public IActionResult CadastrarProduto(Produto produto)
         {
             _produtoRepository.Cadastrar(produto);
-            _context.SaveChanges();                  // sempre que alterar o banco, usar essa fun
-            
-            return Created();                        //created representa o codigo 201 que significa "Funcionou e criou algo"
+            return Created();                        
         }
 
     }

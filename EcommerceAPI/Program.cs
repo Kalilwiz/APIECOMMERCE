@@ -8,14 +8,14 @@ builder.Services.AddControllers();
 
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddTransient<AquiCometerasLoucurasContext, AquiCometerasLoucurasContext>();
+builder.Services.AddScoped<AquiCometerasLoucurasContext, AquiCometerasLoucurasContext>();
 
-builder.Services.AddScoped<IprodutoRepository, ProdutoRepository>();
-builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
-builder.Services.AddScoped<IPagamentoRepository, PagamentoRepository>();
+builder.Services.AddTransient<IprodutoRepository, ProdutoRepository>();
+builder.Services.AddTransient<IClienteRepository, ClienteRepository>();
+builder.Services.AddTransient<IPagamentoRepository, PagamentoRepository>();
 
 var app = builder.Build();
-
+ 
 app.UseSwagger();
 app.UseSwaggerUI();
 
