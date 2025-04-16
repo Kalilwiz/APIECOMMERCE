@@ -3,6 +3,7 @@ using EcommerceAPI.Interfaces;
 using EcommerceAPI.Models;
 using EcommerceAPI.Repositories;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EcommerceAPI.Controllers
@@ -28,8 +29,55 @@ namespace EcommerceAPI.Controllers
         public IActionResult CadastrarProduto(Produto produto)
         {
             _produtoRepository.Cadastrar(produto);
-            return Created();                        
+            return Created();
         }
 
+        [HttpGet("{id}")]
+
+        public IActionResult ListarPorID(int id)
+        {
+            Produto produto = _produtoRepository.BuscarPorId(id);
+
+            if (produto == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(produto);
+        }
+
+        [HttpPut("{id}")]
+
+        public IActionResult Alterar(int id, Produto produto)
+        {
+            try
+            {
+                _produtoRepository.Atualizar(id, produto);
+
+                return Ok(produto);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex);
+            }
+        }
+
+        [HttpDelete("{id}")]
+
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                _produtoRepository.Deletar(id);
+                return NoContent();
+
+            }
+            catch (Exception ex)
+            {
+
+                return NotFound(ex);
+            }
+        }
     }
 }
+
