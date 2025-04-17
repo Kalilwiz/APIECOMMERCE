@@ -25,6 +25,19 @@ namespace EcommerceAPI.Controllers
             return Ok(_clienteRepository.ListarTodos());
         }
 
+        [HttpGet("{id}")]
+        public IActionResult BuscarPorId(int id)
+        {
+            Cliente cliente = _clienteRepository.BuscarPorId(id);
+
+            if (cliente == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(cliente);
+        }
+
         [HttpPost]
         public IActionResult Cadastrar(Cliente cliente)
         {
@@ -33,7 +46,37 @@ namespace EcommerceAPI.Controllers
 
         }
 
+        [HttpPut("{id}")]
 
+        public IActionResult Alterar(int id, Cliente cliente)
+        {
+            try
+            {
+                _clienteRepository.Atualizar(id, cliente);
+
+                return Ok(cliente);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex);
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                _clienteRepository.Deletar(id);
+                return NoContent();
+
+            }
+            catch (Exception ex)
+            {
+
+                return NotFound(ex);
+            }
+        }
 
 
 
