@@ -7,13 +7,13 @@ public partial class Pagamento
 {
     public int IdPagamento { get; set; }
 
-    public string? FormaPagamento { get; set; }
+    public int IdPedido { get; set; }
 
-    public string? Status { get; set; }
+    public string FormaPagamento { get; set; } = null!;
 
-    public DateOnly? Data { get; set; }
+    public string Status { get; set; } = null!;
 
-    public int? IdPedido { get; set; }
+    public DateTime Data { get; set; }
 
     public virtual Pedido? IdPedidoNavigation { get; set; }
 }

@@ -23,8 +23,8 @@ namespace EcommerceAPI.Repositories
                 throw new Exception();
             }
 
-            produtoEncontrado.NomeProduto = produto.NomeProduto;
-            produtoEncontrado.CategoriaProduto = produto.CategoriaProduto;
+            produtoEncontrado.Nome = produto.Nome;
+            produtoEncontrado.Categoria = produto.Categoria;
             produtoEncontrado.Preco = produto.Preco;
             produtoEncontrado.EstoqueDisponivel = produto.EstoqueDisponivel;
             produtoEncontrado.Descricao = produto.Descricao;

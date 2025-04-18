@@ -34,9 +34,11 @@ public partial class AquiCometerasLoucurasContext : DbContext
     {
         modelBuilder.Entity<Cliente>(entity =>
         {
-            entity.HasKey(e => e.IdCliente).HasName("PK__Cliente__D59466424BBD69C7");
+            entity.HasKey(e => e.IdCliente).HasName("PK__Cliente__D594664293C2D1DB");
 
             entity.ToTable("Cliente");
+
+            entity.HasIndex(e => e.Email, "UQ__Cliente__A9D105346D7AE7DB").IsUnique();
 
             entity.Property(e => e.Email)
                 .HasMaxLength(100)
@@ -47,6 +49,9 @@ public partial class AquiCometerasLoucurasContext : DbContext
             entity.Property(e => e.NomeCompleto)
                 .HasMaxLength(150)
                 .IsUnicode(false);
+            entity.Property(e => e.Senha)
+                .HasMaxLength(255)
+                .IsUnicode(false);
             entity.Property(e => e.Telefone)
                 .HasMaxLength(20)
                 .IsUnicode(false);
@@ -54,40 +59,44 @@ public partial class AquiCometerasLoucurasContext : DbContext
 
         modelBuilder.Entity<ItemDoPedido>(entity =>
         {
-            entity.HasKey(e => e.IdItemDoPedido).HasName("PK__ItemDoPe__A2261A852B4A1E68");
+            entity.HasKey(e => e.IdItemPedido).HasName("PK__ItemDoPe__F77088BADB719AA8");
 
             entity.ToTable("ItemDoPedido");
 
             entity.HasOne(d => d.IdPedidoNavigation).WithMany(p => p.ItemDoPedidos)
                 .HasForeignKey(d => d.IdPedido)
-                .HasConstraintName("FK__ItemDoPed__IdPed__534D60F1");
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__ItemDoPed__IdPed__7A672E12");
 
             entity.HasOne(d => d.IdProdutoNavigation).WithMany(p => p.ItemDoPedidos)
                 .HasForeignKey(d => d.IdProduto)
-                .HasConstraintName("FK__ItemDoPed__IdPro__5441852A");
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__ItemDoPed__IdPro__7B5B524B");
         });
 
         modelBuilder.Entity<Pagamento>(entity =>
         {
-            entity.HasKey(e => e.IdPagamento).HasName("PK__Pagament__D474651E07F34D14");
+            entity.HasKey(e => e.IdPagamento).HasName("PK__Pagament__D474651E0ABA93AB");
 
             entity.ToTable("Pagamento");
 
+            entity.Property(e => e.Data).HasColumnType("datetime");
             entity.Property(e => e.FormaPagamento)
-                .HasMaxLength(50)
+                .HasMaxLength(30)
                 .IsUnicode(false);
             entity.Property(e => e.Status)
-                .HasMaxLength(50)
+                .HasMaxLength(20)
                 .IsUnicode(false);
 
             entity.HasOne(d => d.IdPedidoNavigation).WithMany(p => p.Pagamentos)
                 .HasForeignKey(d => d.IdPedido)
-                .HasConstraintName("FK__Pagamento__IdPed__4E88ABD4");
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Pagamento__IdPed__75A278F5");
         });
 
         modelBuilder.Entity<Pedido>(entity =>
         {
-            entity.HasKey(e => e.IdPedido).HasName("PK__Pedido__9D335DC361496673");
+            entity.HasKey(e => e.IdPedido).HasName("PK__Pedido__9D335DC3373C9211");
 
             entity.ToTable("Pedido");
 
@@ -98,17 +107,18 @@ public partial class AquiCometerasLoucurasContext : DbContext
 
             entity.HasOne(d => d.IdClienteNavigation).WithMany(p => p.Pedidos)
                 .HasForeignKey(d => d.IdCliente)
-                .HasConstraintName("FK__Pedido__IdClient__4BAC3F29");
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Pedido__IdClient__72C60C4A");
         });
 
         modelBuilder.Entity<Produto>(entity =>
         {
-            entity.HasKey(e => e.IdProduto).HasName("PK__Produto__2E883C23BBDE593E");
+            entity.HasKey(e => e.IdProduto).HasName("PK__Produto__2E883C237F0ED531");
 
             entity.ToTable("Produto");
 
-            entity.Property(e => e.CategoriaProduto)
-                .HasMaxLength(50)
+            entity.Property(e => e.Categoria)
+                .HasMaxLength(100)
                 .IsUnicode(false);
             entity.Property(e => e.Descricao)
                 .HasMaxLength(255)
@@ -116,8 +126,8 @@ public partial class AquiCometerasLoucurasContext : DbContext
             entity.Property(e => e.Imagem)
                 .HasMaxLength(255)
                 .IsUnicode(false);
-            entity.Property(e => e.NomeProduto)
-                .HasMaxLength(50)
+            entity.Property(e => e.Nome)
+                .HasMaxLength(150)
                 .IsUnicode(false);
             entity.Property(e => e.Preco).HasColumnType("decimal(18, 6)");
         });

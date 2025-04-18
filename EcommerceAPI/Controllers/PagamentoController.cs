@@ -4,6 +4,7 @@ using EcommerceAPI.Models;
 using EcommerceAPI.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace EcommerceAPI.Controllers
 {
@@ -31,6 +32,55 @@ namespace EcommerceAPI.Controllers
             _pagamentoRepository.Cadastrar(pagamento);
 
             return Created();
+        }
+
+        [HttpGet("{id}")]
+
+        public IActionResult BuscarPorId(int id)
+        {
+            Pagamento pagamento = _pagamentoRepository.BuscarPorId(id);
+
+            if (pagamento == null)
+            {
+                throw new Exception();
+
+            }
+
+            return Ok(pagamento);
+
+        }
+
+        [HttpPut("{id}")]
+
+        public IActionResult Alterar(int id, Pagamento pagamento)
+        {
+            try
+            {
+                _pagamentoRepository.Atualizar(id, pagamento);
+
+                return Ok(pagamento);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex);
+            }
+        }
+
+        [HttpDelete("{id}")]
+
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                _pagamentoRepository.Deletar(id);
+                return NoContent();
+
+            }
+            catch (Exception ex)
+            {
+
+                return NotFound(ex);
+            }
         }
     }
 }
