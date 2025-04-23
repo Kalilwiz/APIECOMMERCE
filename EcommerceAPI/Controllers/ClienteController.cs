@@ -38,12 +38,33 @@ namespace EcommerceAPI.Controllers
             return Ok(cliente);
         }
 
+        [HttpGet("{email}/{senha}")]
+
+        public IActionResult login(string email, string senha)
+        {
+            Cliente cliente = _clienteRepository.BuscarPorEmailSenha(email, senha);
+
+            if (cliente == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(cliente);
+        }
+
         [HttpPost]
         public IActionResult Cadastrar(Cliente cliente)
         {
             _clienteRepository.Cadastrar(cliente);
             return Created();
 
+        }
+
+        [HttpPost]
+        public IActionResult CriarLogin(Cliente email, Cliente Senha)
+        {
+            _clienteRepository.CriarLogin(email, Senha);
+            return Created();
         }
 
         [HttpPut("{id}")]

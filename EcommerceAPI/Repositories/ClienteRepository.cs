@@ -26,13 +26,17 @@ namespace EcommerceAPI.Repositories
             clienteEncontrado.Email = cliente.Email;
             clienteEncontrado.Telefone = cliente.Telefone;
             clienteEncontrado.Endereco = cliente.Endereco;
+            clienteEncontrado.Senha = cliente.Senha;
+            clienteEncontrado.DataCadastro = cliente.DataCadastro;
 
             _context.SaveChanges();
         }
 
-        public Cliente BuscarPorEmailSenha(string email, string senha)
+        public Cliente? BuscarPorEmailSenha(string email, string senha)
         {
-            throw new NotImplementedException();
+            Cliente clienteEncontrado = _context.Clientes.FirstOrDefault(c => c.Email == email && c.Senha == senha);
+
+            return clienteEncontrado;
         }
 
         public Cliente BuscarPorId(int id)
@@ -43,6 +47,14 @@ namespace EcommerceAPI.Repositories
         public void Cadastrar(Cliente cliente)
         {
             _context.Clientes.Add(cliente);
+
+            _context.SaveChanges();
+        }
+
+        public void CriarLogin(Cliente email, Cliente Senha)
+        {
+            _context.Clientes.Add(email);
+            _context.Clientes.Add(Senha);
 
             _context.SaveChanges();
         }

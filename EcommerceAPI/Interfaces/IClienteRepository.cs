@@ -10,6 +10,8 @@ namespace EcommerceAPI.Interfaces
         Cliente BuscarPorId(int id);
         Cliente BuscarPorEmailSenha(string email, string senha);
 
+        Cliente CriarLogin(Cliente email, Cliente senha);
+
         //  C - Create
         void Cadastrar(Cliente cliente);
 
