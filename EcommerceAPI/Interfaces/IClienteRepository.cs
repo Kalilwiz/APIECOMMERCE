@@ -1,4 +1,5 @@
-﻿using EcommerceAPI.Models;
+﻿using EcommerceAPI.DTO;
+using EcommerceAPI.Models;
 
 namespace EcommerceAPI.Interfaces
 {
@@ -10,10 +11,12 @@ namespace EcommerceAPI.Interfaces
         Cliente BuscarPorId(int id);
         Cliente BuscarPorEmailSenha(string email, string senha);
 
+        List<Cliente> BuscarClientePorNome(string nome);
+
         Cliente CriarLogin(Cliente email, Cliente senha);
 
         //  C - Create
-        void Cadastrar(Cliente cliente);
+        void Cadastrar(CadastrarClienteDto cliente);
 
         //  U - Update
 

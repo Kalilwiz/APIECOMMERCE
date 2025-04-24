@@ -1,4 +1,5 @@
 ﻿using EcommerceAPI.Context;
+using EcommerceAPI.DTO;
 using EcommerceAPI.Interfaces;
 using EcommerceAPI.Models;
 
@@ -39,8 +40,18 @@ namespace EcommerceAPI.Repositories
             return _context.Produtos.FirstOrDefault(p => p.IdProduto == id);        // funcao lambda
         }
 
-        public void Cadastrar(Produto produto)
+        public void Cadastrar(CadastrarProdutoDto dto)
         {
+            Produto produto = new Produto
+            {
+                Nome = dto.Nome,
+                Descricao = dto.Descricao,
+                Preco = dto.Preco,
+                EstoqueDisponivel = dto.EstoqueDisponivel,
+                Categoria = dto.Categoria,
+                Imagem = dto.Imagem,
+
+            };
             _context.Produtos.Add(produto);
 
             _context.SaveChanges();

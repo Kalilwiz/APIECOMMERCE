@@ -1,4 +1,5 @@
 ﻿using EcommerceAPI.Context;
+using EcommerceAPI.DTO;
 using EcommerceAPI.Interfaces;
 using EcommerceAPI.Models;
 using EcommerceAPI.Repositories;
@@ -26,7 +27,7 @@ namespace EcommerceAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult CadastrarProduto(Produto produto)
+        public IActionResult CadastrarProduto(CadastrarProdutoDto produto)
         {
             _produtoRepository.Cadastrar(produto);
             return Created();

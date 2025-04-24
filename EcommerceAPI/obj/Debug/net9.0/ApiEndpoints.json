@@ -19,7 +19,7 @@
     "Parameters": [
       {
         "Name": "cliente",
-        "Type": "EcommerceAPI.Models.Cliente",
+        "Type": "EcommerceAPI.DTO.CadastrarClienteDto",
         "IsRequired": true
       }
     ],
@@ -119,7 +119,7 @@
     "Parameters": [
       {
         "Name": "pagamento",
-        "Type": "EcommerceAPI.Models.Pagamento",
+        "Type": "EcommerceAPI.DTO.CadastrarPagamentoDto",
         "IsRequired": true
       }
     ],
@@ -198,7 +198,7 @@
     "Parameters": [
       {
         "Name": "produto",
-        "Type": "EcommerceAPI.Models.Produto",
+        "Type": "EcommerceAPI.DTO.CadastrarProdutoDto",
         "IsRequired": true
       }
     ],
@@ -252,6 +252,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EcommerceAPI.Controllers.ClienteController",
+    "Method": "ListarPorNome",
+    "RelativePath": "buscar/{nome}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nome",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
