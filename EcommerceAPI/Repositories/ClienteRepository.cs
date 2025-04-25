@@ -90,9 +90,18 @@ namespace EcommerceAPI.Repositories
             _context.SaveChanges();
         }
 
-        public List<Cliente> ListarTodos()
+        public List<ListarClientesDto> ListarTodos()
         {
-            return _context.Clientes.OrderBy(C => C.NomeCompleto).ToList();
+            return _context.Clientes.Select(c => new ListarClientesDto
+            {
+                IdCliente = c.IdCliente,
+                NomeCompleto = c.NomeCompleto,
+                Email = c.Email,
+                Telefone = c.Telefone,
+                Endereco = c.Endereco,
+                DataCadastro = c.DataCadastro
+            }).ToList();
+
         }
 
         Cliente IClienteRepository.CriarLogin(Cliente email, Cliente senha)

@@ -6,7 +6,7 @@ namespace EcommerceAPI.Interfaces
     public interface IClienteRepository
     {
         //  R - Read
-        List<Cliente> ListarTodos();
+        List<ListarClientesDto> ListarTodos();
 
         Cliente BuscarPorId(int id);
         Cliente BuscarPorEmailSenha(string email, string senha);

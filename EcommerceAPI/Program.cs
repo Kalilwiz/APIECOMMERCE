@@ -13,6 +13,7 @@ builder.Services.AddDbContext<AquiCometerasLoucurasContext, AquiCometerasLoucura
 builder.Services.AddTransient<IprodutoRepository, ProdutoRepository>();
 builder.Services.AddTransient<IClienteRepository, ClienteRepository>();
 builder.Services.AddTransient<IPagamentoRepository, PagamentoRepository>();
+builder.Services.AddTransient<IPedidoRepository, PedidoRepository>();
 
 var app = builder.Build();
  

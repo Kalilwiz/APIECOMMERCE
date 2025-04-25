@@ -15,14 +15,20 @@ namespace EcommerceAPI.Repositories
             _context = context;
         }
 
+        // crio o metodo atualizar com os argumentos id e uma variavel do tipo produto
         public void Atualizar(int id, Produto produto)
         {
+
+            // crio uma variavel do tipo produto, procuro dentro do contexto o id usando FIND e armazeno dentro da variavel
             Produto produtoEncontrado = _context.Produtos.Find(id);
 
+            // verifico se o id encontrado nao e nulo e lanco um erro para tratar
             if (produtoEncontrado == null)
             {
                 throw new Exception();
             }
+
+            // uso a variavel criada para alterar o banco com base na informacao que o usuario informar em produto
 
             produtoEncontrado.Nome = produto.Nome;
             produtoEncontrado.Categoria = produto.Categoria;
@@ -30,6 +36,8 @@ namespace EcommerceAPI.Repositories
             produtoEncontrado.EstoqueDisponivel = produto.EstoqueDisponivel;
             produtoEncontrado.Descricao = produto.Descricao;
             produtoEncontrado.Imagem = produto.Imagem;
+
+            // salvo as alteracoes no contexto
 
             _context.SaveChanges();
 
