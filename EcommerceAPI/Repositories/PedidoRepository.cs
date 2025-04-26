@@ -2,6 +2,7 @@
 using EcommerceAPI.DTO;
 using EcommerceAPI.Interfaces;
 using EcommerceAPI.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 
 namespace EcommerceAPI.Repositories
@@ -34,7 +35,7 @@ namespace EcommerceAPI.Repositories
 
         public Pedido BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            return _context.Pedidos.Include(p => p.ItemDoPedidos).ThenInclude(p => p.IdProdutoNavigation).FirstOrDefault(p => p.IdPedido == id);
         }
 
         public void Cadastrar(CadastrarPedidoDto dto)
@@ -78,12 +79,15 @@ namespace EcommerceAPI.Repositories
 
         public void Deletar(int id)
         {
-            throw new NotImplementedException();
+            var PedidoEncontrado = _context.Pedidos.Find(id);
+
+            _context.Pedidos.Remove(PedidoEncontrado);
+            _context.SaveChanges(true);
         }
 
         public List<Pedido> ListarTodos()
         {
-            throw new NotImplementedException();
+            return _context.Pedidos.Include(p => p.ItemDoPedidos).ThenInclude(p => p.IdProdutoNavigation).ToList();
         }
     }
 }

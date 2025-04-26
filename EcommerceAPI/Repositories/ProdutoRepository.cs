@@ -1,4 +1,5 @@
-﻿using EcommerceAPI.Context;
+﻿using System.Diagnostics.Contracts;
+using EcommerceAPI.Context;
 using EcommerceAPI.DTO;
 using EcommerceAPI.Interfaces;
 using EcommerceAPI.Models;
@@ -43,13 +44,17 @@ namespace EcommerceAPI.Repositories
 
         }
 
+        // cria um metodo com um argumento e usa ele com uma funcao lambda e a funcao firstordefout para trazer o valor sempre que for igual ao dado pelo usuario
         public Produto BuscarPorId(int id)
         {
             return _context.Produtos.FirstOrDefault(p => p.IdProduto == id);        // funcao lambda
         }
 
+        // cria uma variavel usando a interface cadastrar dto para mostrar apenas o que quer
         public void Cadastrar(CadastrarProdutoDto dto)
         {
+
+            // cria uma variavel produto para passar os dados do cadastro para dentro da tabela produtos
             Produto produto = new Produto
             {
                 Nome = dto.Nome,
@@ -60,26 +65,36 @@ namespace EcommerceAPI.Repositories
                 Imagem = dto.Imagem,
 
             };
+
+            // manda para o contexto e salva
+
             _context.Produtos.Add(produto);
 
             _context.SaveChanges();
 
         }
 
+        // cria o metodo deletar com o argumento id, 
+
         public void Deletar(int id)
         {
+            // cria uma variavel do tipo produto e procura dentro do contxto usando a funçao FIND
+
             Produto produtoEncontrado = _context.Produtos.Find(id);
 
+            // verifica se o valor encontrado nao e null e se for cria um erro
             if (produtoEncontrado == null)
             {
                 throw new Exception();
             }
 
+            // manda para o contexto e salva
             _context.Produtos.Remove(produtoEncontrado);
             _context.SaveChanges();
 
         }
 
+        // cria um metodo listar todos do tipo LIST usando a classe produto e procura usando o metodo tolist que tras uma lista com tudo que ta dentro de produto
         public List<Produto> ListarTodos()
         {
             return _context.Produtos.ToList();
