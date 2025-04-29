@@ -2,6 +2,7 @@
 using EcommerceAPI.DTO;
 using EcommerceAPI.Interfaces;
 using EcommerceAPI.Models;
+using EcommerceAPI.Services;
 
 namespace EcommerceAPI.Repositories
 {
@@ -54,7 +55,7 @@ namespace EcommerceAPI.Repositories
 
         public void Cadastrar(CadastrarClienteDto dto)
         {
-            Cliente cliente = new Cliente 
+            Cliente cliente = new Cliente
             {
                 NomeCompleto = dto.NomeCompleto,
                 Email = dto.Email,
@@ -64,6 +65,9 @@ namespace EcommerceAPI.Repositories
                 DataCadastro = dto.DataCadastro,
             };
 
+            var passowordService = new PasswordService();
+
+            cliente.Senha = passowordService.PassowordRasher(cliente);
 
             _context.Clientes.Add(cliente);
 

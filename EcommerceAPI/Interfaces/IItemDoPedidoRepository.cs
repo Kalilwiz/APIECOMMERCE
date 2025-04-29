@@ -1,15 +1,16 @@
-﻿using EcommerceAPI.Models;
+﻿using EcommerceAPI.DTO;
+using EcommerceAPI.Models;
 
 namespace EcommerceAPI.Interfaces
 {
-    public interface IItemDoPedido
+    public interface IItemDoPedidoRepository
     {
         List<ItemDoPedido> ListarTodos();
 
         ItemDoPedido BuscarPorId(int id);
 
         //  C - Create (cadastro)
-        void Cadastrar(ItemDoPedido itempedido);
+        void Cadastrar(CadastrarItemDoPedidoDTO itempedido);
 
         //  U - Update (atualizacao)
 

@@ -3,6 +3,7 @@ using EcommerceAPI.DTO;
 using EcommerceAPI.Interfaces;
 using EcommerceAPI.Models;
 using EcommerceAPI.Repositories;
+using EcommerceAPI.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -40,20 +41,6 @@ namespace EcommerceAPI.Controllers
         public IActionResult BuscarPorId(int id)
         {
             Cliente cliente = _clienteRepository.BuscarPorId(id);
-
-            if (cliente == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(cliente);
-        }
-
-        [HttpGet("{email}/{senha}")]
-
-        public IActionResult login(string email, string senha)
-        {
-            Cliente cliente = _clienteRepository.BuscarPorEmailSenha(email, senha);
 
             if (cliente == null)
             {
