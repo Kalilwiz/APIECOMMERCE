@@ -170,8 +170,30 @@
 				{
 					"name": "Listar Todos",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZUBnbWFpbC5jb20iLCJleHAiOjE3NDU5NzQ0NjksImlzcyI6ImVjb21tZXJjZSIsImF1ZCI6ImVjb21tZXJjZSJ9.HZ298N6nEvUQ_cWbEDl2bdg3hwdUPJbfRW6cXyo9Jzk",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7093/api/cliente",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7093",
+							"path": [
+								"api",
+								"cliente"
+							]
+						}
 					},
 					"response": []
 				},
@@ -182,7 +204,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nomeCompleto\": \"leoleo\",\r\n    \"email\": \"leoleo.kalil@gmail.com\",\r\n    \"telefone\": \"11968874048\",\r\n    \"endereco\": \"rua santa madalena\",\r\n    \"dataCadastro\": \"2025-04-17\"\r\n}",
+							"raw": "{\r\n    \"nomeCompleto\": \"leoleo\",\r\n    \"email\": \"teste@gmail.com\",\r\n    \"telefone\": \"11968874048\",\r\n    \"endereco\": \"rua santa madalena\",\r\n    \"senha\": \"LEOLEOLEO\",\r\n    \"dataCadastro\": \"2025-04-17\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -254,6 +276,44 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"teste@gmail.com\",\r\n    \"senha\": \"LEOLEOLEO\"   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7093/api/Cliente/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7093",
+							"path": [
+								"api",
+								"Cliente",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPorCliente",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			]
 		},
@@ -272,7 +332,20 @@
 					"name": "Listar por id",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7093/api/Pagamento/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7093",
+							"path": [
+								"api",
+								"Pagamento",
+								"1"
+							]
+						}
 					},
 					"response": []
 				},

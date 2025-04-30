@@ -62,7 +62,7 @@ namespace EcommerceAPI.Repositories
                 var produto = _context.Produtos.Find(dto.Produto[i]);
 
                 // crio uma varialve que vai armazenar os dados do item pedido
-                var itemPedido = new ItemDoPedidoRepository
+                var itemPedido = new ItemDoPedido
                 {
                     IdPedido = pedido.IdPedido,
                     IdProduto = produto.IdProduto,

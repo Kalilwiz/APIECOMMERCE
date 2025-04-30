@@ -4,6 +4,7 @@ using EcommerceAPI.Interfaces;
 using EcommerceAPI.Models;
 using EcommerceAPI.Repositories;
 using EcommerceAPI.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,9 +29,27 @@ namespace EcommerceAPI.Controllers
             return Ok(_clienteRepository.BuscarClientePorNome(nome));
         }
 
+        [HttpPost("login")]
+
+        public IActionResult Login(LoginDTO login)
+        {
+            var cliente = _clienteRepository.BuscarPorEmailSenha(login.Email, login.Senha);
+
+            if (cliente == null)
+            {
+                return Unauthorized("HAHAHAHAHAHAH ERROU");
+            }
+
+            var tokenservice = new TokenServices();
+
+            var token = tokenservice.GenerateToken(cliente.Email);
+
+            return Ok(token);
+        }
 
 
         [HttpGet]
+        [Authorize]
 
         public IActionResult ListarTodos()
         {
